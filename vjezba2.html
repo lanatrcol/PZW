@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vjezba2
+    </title>
+</head>
+<body>
+    <h1>JavaScript vježba</h1>
+
+    <button id="button_A" style="width: 100px; height: 100px; background-color: rgb(74, 150, 74);">+</button>
+    <button id="button_B" style="width: 100px; height: 100px; background-color: rgb(151, 67, 67);">-</button>
+    <h3 id="heading_A"></h3>
+    
+
+    <script>
+        const buttonA = document.querySelector("#button_A");
+        const buttonB = document.querySelector("#button_B");
+        const headingA = document.querySelector("#heading_A");
+
+        let count = 1;
+        buttonA.onclick = () => {
+            headingA.textContent = ` broj klikova: ${count} `;
+            count += 1;
+        };
+
+        buttonB.onclick = () => {
+            headingA.textContent = ` broj klikova: ${count -2} `;
+            count -= 1;
+        };
+
+        
+    </script>
+    
+</body>
+</html>
