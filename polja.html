@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Polja u JS</h1>
+
+    <!-- Add divs to display the results -->
+    <div id="auti"></div>
+    <div id="fruits"></div>
+    <div id="food"></div>
+    <p id="demo"></p>
+
+    <script>
+        let auti = new Array("BMW", "Audi", "Porsche");
+        auti.sort();  // Sort array alphabetically
+        auti.reverse();  // Reverse the sorted array
+
+        // Output the results in the corresponding divs
+        document.getElementById("auti").innerHTML = auti.join("<br>");
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();  // Sort array alphabetically
+        fruits.reverse();  // Reverse the sorted array
+
+        document.getElementById("fruits").innerHTML = "Fruits length: " + fruits.length + "<br>" + fruits.join("*");
+
+        const food = ["Pizza", "Apple", "Banana", "Orange"];
+        food.sort();  // Sort array alphabetically
+        food.reverse();  // Reverse the sorted array
+
+        document.getElementById("food").innerHTML = food.join("<br>");
+
+        const numbers = [2, 3, 4, 5, 6];
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = txt;
+
+        function myFunction(value, index, array) {
+            txt += value + "<br>";  // Fix here: Use '+=' to append to the txt variable
+        }
+    </script>
+</body>
+</html>
